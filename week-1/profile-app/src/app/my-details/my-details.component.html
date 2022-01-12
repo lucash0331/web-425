@@ -9,11 +9,13 @@
 
 <!--Unordered list of favorites.-->
 <ul class="list-group">
+  <li class="list-group-item">Full Name: {{ myProfile.fullName }}</li>
+  <li class="list-group-item">Favorite Food: {{ myProfile.favoriteFood }}</li>
+  <li class="list-group-item">Favorite Color: {{ myProfile.favoriteColor }}</li>
   <li class="list-group-item">
-    <strong>Full Name:</strong> Lucas Hoffman
+    Keywords:
+    <span *ngFor="Let word of myProfile.keywords">
+      {{ word }}
+    </span>
   </li>
-  <li class="list-group-item">
-    <strong>Favorite Food:</strong> Salmon
-  </li>
-  <li class="list-group-item"><strong>Favorite Color:</strong> Light Blue</li>
 </ul>

@@ -36,7 +36,7 @@
   <h2>{{ assignment }}</h2>
 
   <!--row-->
-  <div class="row">
+  <div class="row" *ngIf="isLoggedIn; else showError">
 
     <!--App-my-image left hand column-->
     <div class="col-sm-6">
@@ -49,5 +49,17 @@
     </div>
   </div>
   <!--row-->
+
+   <ng-template #showError>
+    <div class="row">
+      <div class="col-sm-12">
+        <h4 class="alert alert-danger">
+          You are not authorized to view this content
+        </h4>
+      </div>
+    </div>
+  </ng-template>
+
+
 </div>
 <!--container-->
