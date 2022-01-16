@@ -1,0 +1,32 @@
+<!--
+===============================================
+; Title: Assignment 2.4 - Routing in Action
+; Author: Lucas Hoffman
+; Date: January 16, 2022
+; Description: Composer list.html for assignment 2.4
+==============================================
+*/-->
+
+<!--Container with elements-->
+<div class="container">
+  <br />
+  <br />
+  <table class="table table-bordered" style="width: 600px">
+    <!--Column headers-->
+    <thead style="background-color: red; color: white">
+      <tr>
+        <th scope="col">Full name</th>
+        <th scope="col">Genre</th>
+      </tr>
+    </thead>
+
+    <!--Table body-->
+    <tbody>
+      <!--Composers array using *ngFor-->
+      <tr *ngFor="let composer of composers">
+        <td scope="row">{{ composer.fullName }}</td>
+        <td>{{ composer.genre }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
