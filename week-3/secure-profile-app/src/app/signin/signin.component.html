@@ -1,0 +1,42 @@
+<!--
+* Title: signin.component.html
+* Author: Lucas Hoffman
+* Date: January 21, 2022
+* Description: html file for the signin component
+-->
+
+<!-- Start of sign in container -->
+<div class="card signin-container">
+
+  <!-- Start of card body -->
+  <div class="card-body">
+
+    <!-- Card title -->
+    <h3 class="card-title"> Sign in </h3>
+
+    <!-- card text -->
+    <form class="card-text">
+
+      <!-- Form for username  -->
+      <div class="form-group">
+        <label for="txtUserName"> Username </label>
+        <input type="text" class="form-control" id="txtUserName" placeholder="Enter your username">
+      </div>
+
+      <!-- Form for password -->
+      <div class="form-group">
+        <label for="txtPassword"> Password </label>
+        <input type="password" class="form-control" id="txtPassword" placeholder="Enter your password">
+      </div>
+
+      <br />
+
+      <!-- Submit button -->
+      <div class="form-group">
+        <button class="btn btn-primary float-right" (click)="signin()"> Submit </button>
+      </div>
+
+
+    </form>
+  </div>
+</div>

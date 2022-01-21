@@ -1,0 +1,12 @@
+/*
+* Title: signin.component.css
+* Author: Lucas Hoffman
+* Date: January 21, 2022
+* Description: CSS file for the sign in component
+*/
+
+.signin-container {
+  width: 35%;
+  margin: 0 auto;
+  margin-top: 10%;
+}
