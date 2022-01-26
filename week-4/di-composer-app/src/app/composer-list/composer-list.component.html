@@ -1,0 +1,38 @@
+<!--
+===============================================
+; Title: Assignment 3.2
+; Author: Lucas Hoffman
+; Date: January 20, 2022
+; Description: Composer list.html for assignment 3.2
+==============================================
+*/-->
+
+<!--Container with elements-->
+<div class="container">
+  <br />
+  <br />
+  <table class="table table-bordered" style="width: 600px">
+    <!--Column headers-->
+    <thead style="background-color: red; color: white">
+      <tr>
+        <th scope="col">Composer ID</th>
+        <th scope="col">Full name</th>
+        <th scope="col">Genre</th>
+      </tr>
+    </thead>
+
+    <!--Table body-->
+    <tbody>
+      <!--Composers array using *ngFor-->
+      <tr *ngFor="let composer of composers">
+        <td scope="row">
+          <a routerLink="/composer-details/{{ composer.composerId }}">
+            {{ composer.composerId }}
+          </a>
+        </td>
+        <td scope="row">{{ composer.fullName }}</td>
+        <td>{{ composer.genre }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
