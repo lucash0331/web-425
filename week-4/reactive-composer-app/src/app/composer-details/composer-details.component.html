@@ -1,0 +1,21 @@
+<!--
+  * Title: composer-details.component.html
+  * Author: Lucas Hoffman
+  * Date: January 20, 2022
+  * Description: html file for composer-details component
+-->
+
+<div class="row">
+
+  <div class="col-sm-12">
+
+    <ul class="list-group">
+
+      <li class="list-group-item">Composer ID: {{ composer.composerId }}</li>
+      <li class="list-group-item">Full Name: {{ composer.fullName }}</li>
+      <li class="list-group-item">Genre: {{ composer.genre }}</li>
+    </ul>
+    <br/>
+    <a routerLink="/composer-list" class="float-right">Return to Composers</a>
+  </div>
+</div>
