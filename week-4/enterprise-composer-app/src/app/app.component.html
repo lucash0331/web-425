@@ -1,0 +1,46 @@
+<!--
+============================================================
+; Title: Assignment 4.4 - Async Pipe
+; Author: Lucas Hoffman
+; Date: January 29, 2022
+; Description: app.component.html
+============================================================
+*/-->
+
+<!--navigation bar-->
+<nav
+  class="navbar navbar-expand-sm navbar-dark"
+  style="background-color: red"
+>
+  <ul class="navbar nav">
+    <!--Link to Home-->
+    <li class="nav-item-active">
+      <a class="nav-link" routerLink="/composer-list" style="color: white"
+        >Composer List</a
+      >
+    </li>
+
+    <!--Link to About-->
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/about" style="color: white">About</a>
+    </li>
+
+    <!--Link to Contact Us-->
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/contact" style="color: white"
+        >Contact Us</a
+      >
+    </li>
+  </ul>
+</nav>
+
+<!--Main body container with assignment elements -->
+<div class="container">
+  <br />
+  <br />
+  <!-- App Title-->
+  <h1>Assignment 4.4 - Async Pipe</h1>
+
+  <!--Router outlet to display views-->
+  <router-outlet></router-outlet>
+</div>
