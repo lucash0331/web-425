@@ -1,0 +1,55 @@
+<!--
+  *Title: contact.component.html
+  *Author: Lucas Hoffman
+  *Date: Feb 4, 2022
+  *Description: contact.component.html file for in-n-out-books
+-->
+
+
+<div fxLayout="row wrap">
+  <div fxFlex>
+    <!-- card elevation-->
+    <mat-card class="mat-elevation-z0">
+      <!--Card title mat-icon-->
+
+      <mat-card-title class="card-title-icon">
+        <mat-icon color="primary">navigation</mat-icon>
+      </mat-card-title>
+      <br />
+
+      <!--Card with address info-->
+      <mat-card-content class="align-center">
+        <p>89 Peachtree Street</p>
+        <p>Atlanta, GA</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div fxFlex>
+    <!--Card with phone info-->
+    <mat-card class="mat-elevation-z0">
+      <mat-card-title class="card-title-icon">
+        <mat-icon color="primary">phone</mat-icon>
+      </mat-card-title>
+      <br />
+      <mat-card-content class="align-center">
+        <p>Direct: 111-111-1111</p>
+        <p>Toll-free: 1-800-000-000</p>
+        <p>Fax: 222-222-222-222</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+<br /><br /><br /><br />
+<!--Additional column with website info-->
+<div fxLayout="column">
+  <p style="text-align: center">
+    Visit Anne Frank online at
+    <a
+      class="attribution-link"
+      href="https://www.annefrank.org/en/"
+      target="_blank"
+      >annefrank.org</a
+    >
+  </p>
+</div>
