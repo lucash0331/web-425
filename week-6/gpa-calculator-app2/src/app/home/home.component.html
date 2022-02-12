@@ -1,0 +1,93 @@
+<!--
+; Title: home.component.html
+; Author: Lucas Hoffman
+; Date: February 12, 2022
+; Description: home.component.html file for gpa-calculator-app2
+-->
+
+<div fxLayout="row wrap" fxLayoutGap="20px">
+  <!--Left hand Div-->
+  <div fxFlex>
+    <!--Mat-card for grade-form-->
+    <mat-card class="grade-form">
+      <mat-card-title>Grade Entry</mat-card-title>
+      <mat-card-content>
+        <!--Form with two fields-->
+        <form fxLayout="column">
+          <!--Form field-->
+          <mat-form-field fxFlex appearance="fill">
+            <!--Form-field label-->
+            <mat-label>Course</mat-label>
+            <input
+              type="text"
+              name="txtCourse"
+              id="txtCourse"
+              matInput
+              [(ngModel)]="transcriptEntry.course"
+            />
+          </mat-form-field>
+          <!--Form field Select-->
+          <mat-form-field fxFlex appearance="fill">
+            <!--Form field Label-->
+            <mat-label>Grade</mat-label>
+            <!--Mat select-->
+            <mat-select [(ngModel)]="transcriptEntry.grade" name="selectGrade">
+              <!--Mat-option-->
+              <mat-option
+                *ngFor="let grade of selectableGrades"
+                [value]="grade"
+                >{{ grade }}</mat-option
+              >
+            </mat-select>
+          </mat-form-field>
+          <!--Button-->
+          <button mat-raised-button color="primary" (click)="saveEntry()">
+            Save
+          </button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!--Right hand Div-->
+  <div fxFlex>
+    <!--Button above grade-summary, on click clearEntries-->
+    <button mat-button color="primary" (click)="clearEntries()">Clear</button>
+    <mat-card class="mat-elevation-z0">
+      <mat-card-title>Transcript</mat-card-title>
+      <!--Card-content with app-grade-summary component-->
+      <mat-card-content
+        ><app-grade-summary
+          *ngFor="let entry of transcriptEntries"
+          [course]="entry.course"
+          [grade]="entry.grade"
+        >
+        </app-grade-summary
+      ></mat-card-content>
+      <br /><br />
+      <!--Column-->
+      <div fxLayout="column" fxLayoutGap="20px">
+        <div fxFlex class="gpa">
+          <!--Button above card, click event to call calculateResults-->
+          <button
+            mat-raised-button
+            color="primary"
+            (click)="calculateResults()"
+          >
+            Calculate GPA
+          </button>
+
+          <!--Card, content for GPA-->
+          <mat-card class="mat-elevation-z0">
+            <!--Card title-->
+            <mat-card-title
+              >GPA:<app-gpa [gpaTotal]="gpaTotal"></app-gpa
+            ></mat-card-title>
+            <!--Card content-->
+            <mat-card-content></mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>
