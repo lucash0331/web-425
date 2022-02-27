@@ -1,0 +1,45 @@
+/*
+*Title: styles.scss
+*Author: Lucas Hoffman
+*Date: Feb 4, 2022
+*Description: styles.scss file for in-n-out-books
+*/
+
+//import statement
+@import './theme';
+
+
+html, body {
+   height: 100%;
+  }
+
+body {
+   margin: 0;
+   font-family: Roboto, "Helvetica Neue", sans-serif;
+  }
+
+.blue {
+  color: #2196f3;
+}
+
+.green {
+  color: #66bb6a;
+}
+
+.attribution-link {
+  text-decoration: none;
+  color: white;
+}
+
+.attribution-link:hover {
+  text-decoration: underline;
+}
+
+.card-title-icon, .mat-icon {
+  font-size: 72px;
+}
+
+.align-center {
+  text-align: center;
+}
+
