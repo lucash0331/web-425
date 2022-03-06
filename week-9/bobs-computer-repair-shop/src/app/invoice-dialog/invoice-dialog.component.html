@@ -1,0 +1,65 @@
+<!-- <h2 mat-dialog-title>Invoice</h2>
+<div mat-dialog-content>
+  <div>
+    <div >
+      Name - Price
+      <br />
+      {{ item.name }} ({{ item.price }}
+    </div>
+    <div>
+      <br />
+      {{ invoice.getServiceTotal() }}
+      <br />
+      {{ invoice.getPartsAmount() }}
+      <br />
+      {{ invoice.getLaborAmount() }}
+      <br />
+      {{ invoice.getInvoiceTotal() }}
+    </div>
+  </div>
+</div> -->
+
+<h1 mat-dialog-title>Invoice</h1>
+<div mat-dialog-content>
+  <mat-list>
+    <mat-list-item *ngFor="let item of invoice.serviceItems">
+      <mat-icon mat-list-icon>description</mat-icon>
+      <div mat-line>{{ item.name }}</div>
+      <div mat-line>{{ item.price | number: "1.2-2" }}</div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <mat-icon mat-list-icon>money</mat-icon>
+      <div mat-line>
+        Services Subtotal: {{ invoice.getServiceTotal() | number: "1.2-2" }}
+      </div>
+    </mat-list-item>
+    <mat-list-item>
+      <mat-icon mat-list-icon>developer_board</mat-icon>
+      <div mat-line>
+        Parts Cost: {{ invoice.getPartsAmount() | number: "1.2-2" }}
+      </div>
+    </mat-list-item>
+    <mat-list-item>
+      <mat-icon mat-list-icon>build</mat-icon>
+      <div mat-line>
+        Labor Cost: {{ invoice.getLaborAmount() * 50 | number: "1.2-2" }}
+      </div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <mat-icon mat-list-icon>money</mat-icon>
+      <div mat-line>
+        Total Due: {{ invoice.getInvoiceTotal() | number: "1.2-2" }}
+      </div>
+    </mat-list-item>
+  </mat-list>
+</div>
+<div mat-dialog-actions>
+  <button mat-stroked-button matDialogClose="confirm" color="primary">
+    Place Order
+  </button>
+  <button mat-stroked-button matDialogClose="cancel" color="accent">
+    Cancel Order
+  </button>
+</div>

@@ -1,0 +1,17 @@
+<mat-toolbar class="toolbar mat-primary">
+  <mat-toolbar-row class="mat-elevation-z4">
+    <div class="logo">
+      <img class="bobs-logo" src="./assets/logo.png" height="60" />
+      <!-- <h1>Bob's Computer Repair Shop</h1> -->
+    </div>
+    <div style="width: 95%">
+      <div fxLayout="row wrap" fxLayoutAlign="end start">
+        <button mat-button routerLink="/services">Services</button>
+        <button mat-button routerLink="/contact">Contact</button>
+        <button mat-button routerLink="/about">About</button>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

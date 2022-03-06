@@ -1,0 +1,49 @@
+@import "./theme";
+
+html,
+body {
+  height: 100%;
+  background-color: whitesmoke;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.blue {
+  color: #f32121;
+}
+
+.green {
+  color: #66bbb4;
+}
+
+.attribution-link {
+  text-decoration: none;
+  color: white;
+}
+
+.attribution-link:hover {
+  text-decoration: underline;
+}
+
+.card-title-icon {
+  text-align: center;
+}
+
+.card-title-icon,
+.mat-icon {
+  font-size: 69px;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.background-image {
+  background-image: url("./assets/keybvboard.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

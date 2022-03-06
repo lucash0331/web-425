@@ -1,0 +1,50 @@
+<div fxLayout="column">
+  <div fxFlex>
+    <form #selectionListForm="ngForm" (submit)="submit()">
+      <mat-card class="mat-elevation-z8 services-container">
+        <mat-card-title>Services</mat-card-title>
+        <mat-card-content *ngFor="let service of services">
+          <mat-selection-list
+            [(ngModel)]="service.checked"
+            [name]="service.name"
+          >
+            <mat-list-option color="primary" value="{{ service.price }}">
+              {{ service.name }} (${{ service.price | number: "1.2-2" }})
+              <mat-divider></mat-divider>
+            </mat-list-option>
+          </mat-selection-list>
+        </mat-card-content>
+        <br />
+        <br />
+        <mat-card-title>Standard Fees</mat-card-title>
+        <br />
+        <mat-card-content class="fees-container">
+          <form>
+            <mat-form-field class="fees-input" appearance="fill">
+              <mat-label>Parts</mat-label>
+              <span matPrefix>$ &nbsp;</span>
+              <input
+                matInput
+                [(ngModel)]="invoice.partsAmount"
+                placeholder="Enter Value"
+                name="parts"
+              />
+            </mat-form-field>
+            <br />
+            <mat-form-field class="fees-input" appearance="fill">
+              <mat-label>Labor</mat-label>
+              <span matPrefix>$ &nbsp;</span>
+              <input
+                matInput
+                placeholder="Hours of Laber @ $50.00/hr"
+                [(ngModel)]="invoice.laborAmount"
+                name="labor"
+              />
+            </mat-form-field>
+          </form>
+          <button mat-stroked-button color="primary">Order Services</button>
+        </mat-card-content>
+      </mat-card>
+    </form>
+  </div>
+</div>
